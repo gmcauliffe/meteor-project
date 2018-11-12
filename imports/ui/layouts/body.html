@@ -1,3 +1,7 @@
 <body>
-  {{> Register}}
+  {{#if currentUser}}
+    {{> Home}}
+  {{else}}
+    {{> Login}}
+  {{/if}}
 </body>
