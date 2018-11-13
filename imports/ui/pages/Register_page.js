@@ -1,14 +1,11 @@
-// eslint-disable-next-line import/no-unresolved
 import { Accounts } from 'meteor/accounts-base';
-// eslint-disable-next-line import/no-unresolved
 import { Meteor } from 'meteor/meteor';
-// eslint-disable-next-line import/no-unresolved
 import { Template } from 'meteor/templating';
 
 import './Register_page.html';
 
 Template.Register.events({
-  'submit .register': function (event) {
+  'submit .register': function registerUser(event) {
     // Prevent default browser form submit
     event.preventDefault();
 
