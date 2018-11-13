@@ -1,7 +1,4 @@
 <body>
-  {{#if currentUser}}
-    {{> Home}}
-  {{else}}
-    {{> Login}}
-  {{/if}}
+  {{> Template.dynamic template=top}}
+  {{> Template.dynamic template=main}}
 </body>

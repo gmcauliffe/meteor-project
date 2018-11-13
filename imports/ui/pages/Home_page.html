@@ -1,4 +1,7 @@
 <template name="Home">
+  {{#App_forceLoggedIn}}
   <h1>{{ currentUser.username }}</h1>
+  <h3>{{ email }}</h3>
   <button><a href="#" class="logout">Logout</a></button>
+  {{/App_forceLoggedIn}}
 </template>
