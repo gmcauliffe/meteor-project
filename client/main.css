@@ -152,7 +152,6 @@ h6,
 }
 @media screen and (min-width: 768px) {
   .page-heading small {
-    margin-top: 0;
     display: inline;
     line-height: inherit;
   }
