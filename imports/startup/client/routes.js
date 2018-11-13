@@ -1,35 +1,41 @@
+/* eslint-disable no-unused-vars */
 import { FlowRouter } from 'meteor/kadira:flow-router';
+import { BlazeLayout } from 'meteor/kadira:blaze-layout';
 
 // Import templates
 import '../../ui/layouts/body';
 import '../../ui/pages/Login_page';
 import '../../ui/pages/Register_page';
 import '../../ui/pages/Home_page';
+import '../../ui/components/App_notFound.html';
 
 // Import to override accounts templates
 // import '../../ui/accounts/accounts-templates.js';
 
 // Below here are the route definitions
 FlowRouter.route('/', {
-  action: function(params, queryParams) {
-    BlazeLayout.render('body', { main: 'Login' });
-  }
+  name: 'Home',
+  action() {
+    BlazeLayout.render('body', { main: 'Home' });
+  },
 });
 
 FlowRouter.route('/login', {
-  action: function(params, queryParams) {
+  name: 'Login',
+  action() {
     BlazeLayout.render('body', { main: 'Login' });
-  }
+  },
 });
 
 FlowRouter.route('/register', {
-  action: function(params, queryParams) {
+  name: 'Register',
+  action() {
     BlazeLayout.render('body', { main: 'Register' });
-  }
+  },
 });
 
-FlowRouter.route('/home', {
-  action: function(params, queryParams) {
-    BlazeLayout.render('body', { main: 'Home' });
-  }
-});
+FlowRouter.notFound = {
+  action() {
+    BlazeLayout.render('body', { main: 'App_notFound' });
+  },
+};
