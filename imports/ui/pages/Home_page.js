@@ -9,3 +9,9 @@ Template.Home.events({
     Meteor.logout();
   },
 });
+
+Template.Home.helpers({
+  email() {
+    return Meteor.user().emails[0].address;
+  },
+});
