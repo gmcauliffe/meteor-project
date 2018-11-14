@@ -1,10 +1,15 @@
 import { Accounts } from 'meteor/accounts-base';
 import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
+import { FlowRouter } from 'meteor/kadira:flow-router';
 
 import './Register_page.html';
 
 Template.Register.events({
+  'change .register': function validate(event) {
+    // do your validation here
+  },
+
   'submit .register': function registerUser(event) {
     // Prevent default browser form submit
     event.preventDefault();
@@ -22,9 +27,16 @@ Template.Register.events({
       if (err) {
         console.log(err);
       } else {
-        console.log('Success!');
+        FlowRouter.go('/');
       }
     });
     Meteor.users.find().fetch();
   },
 });
+
+// Validation Rules
+
+// Trim Helper
+function trimInput(val) {
+  return val.replace(/^\s|\s*$/g, "");
+}
