@@ -25,7 +25,7 @@ Template.Register.events({
       password: passwordVar,
     }, (err) => {
       if (err) {
-        console.log(err);
+        console.log(error.reason);
       } else {
         FlowRouter.go('/');
       }
