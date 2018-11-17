@@ -14,29 +14,54 @@ Template.Register.events({
     // Prevent default browser form submit
     event.preventDefault();
 
-    // Get value from form element
-    const usernameVar = event.target.registerUsername.value;
-    const emailVar = event.target.registerEmail.value;
-    const passwordVar = event.target.registerPassword.value;
+    // // Get value from form element
+    // const usernameVar = event.target.registerUsername.value;
+    // const emailVar = event.target.registerEmail.value;
+    // const passwordVar = event.target.registerPassword.value;
 
-    Accounts.createUser({
-      username: usernameVar,
-      email: emailVar,
-      password: passwordVar,
-    }, (err) => {
-      if (err) {
-        console.log(error.reason);
-      } else {
-        FlowRouter.go('/');
-      }
-    });
-    Meteor.users.find().fetch();
+    // Accounts.createUser({
+    //   username: usernameVar,
+    //   email: emailVar,
+    //   password: passwordVar,
+    // }, (error) => {
+    //   if (error) {
+    //     console.log(error.reason);
+    //   } else {
+    //     FlowRouter.go('/');
+    //   }
+    // });
   },
 });
 
-// Validation Rules
+if (Meteor.isClient) {
+  Template.Register.onCreated(() => {
+    console.log("The 'Register' template was just created.");
+  });
 
-// Trim Helper
-function trimInput(val) {
-  return val.replace(/^\s|\s*$/g, "");
+  Template.Register.onRendered(() => {
+    $('#registerForm').validate({
+      rules: {
+        registerUsername: {
+          required: true,
+          minlength: 6,
+        },
+        registerEmail: {
+          required: true,
+          email: true,
+        },
+        registerPassword: {
+          required: true,
+          minlength: 6,
+        },
+        registerPassword2: {
+          required: true,
+          equalTo: '#registerPassword',
+        },
+      },
+    });
+  });
+
+  Template.Login.onDestroyed(() => {
+    console.log("The 'login' template was just destroyed.");
+  });
 }

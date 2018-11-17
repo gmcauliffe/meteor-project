@@ -23,7 +23,7 @@
                         <!-- END Register Title -->
 
                         <!-- Register Form -->
-                        <form class="register form-horizontal push-50-t push-50" action="/register.html" method="post">
+                        <form id="registerForm" class="register form-horizontal push-50-t push-50" action="/register.html" method="post">
                             <div class="form-group">
                                 <div class="col-xs-12">
                                     <div class="form-material form-material-success">
@@ -35,7 +35,7 @@
                             <div class="form-group">
                                 <div class="col-xs-12">
                                     <div class="form-material form-material-success">
-                                        <input class="form-control" type="email" id="registerEmail" name="registerEmail" placeholder="Please provide your email">
+                                        <input class="form-control" type="email" id="registerEmail" name="registerEmail" placeholder="Please provide your email" required>
                                         <label for="registerEmail">Email</label>
                                     </div>
                                 </div>
@@ -43,7 +43,7 @@
                             <div class="form-group">
                                 <div class="col-xs-12">
                                     <div class="form-material form-material-success">
-                                        <input class="form-control" type="password" id="registerPassword" name="registerPassword" placeholder="Choose a strong password..">
+                                        <input class="form-control" type="password" id="registerPassword" name="registerPassword" placeholder="Choose a strong password.." required>
                                         <label for="registerPassword">Password</label>
                                     </div>
                                 </div>
@@ -51,7 +51,7 @@
                             <div class="form-group">
                                 <div class="col-xs-12">
                                     <div class="form-material form-material-success">
-                                        <input class="form-control" type="password" id="registerPassword2" name="registerPassword2" placeholder="..and confirm it">
+                                        <input class="form-control" type="password" id="registerPassword2" name="registerPassword2" placeholder="..and confirm it" required>
                                         <label for="registerPassword2">Confirm Password</label>
                                     </div>
                                 </div>
@@ -59,7 +59,7 @@
                             <div class="form-group">
                                 <div class="col-xs-12">
                                     <label class="css-input switch switch-sm switch-success">
-                                        <input type="checkbox" id="register-terms" name="register-terms"><span></span> I agree with terms &amp; conditions
+                                        <input type="checkbox" id="register-terms" name="register-terms" required><span></span> I agree with terms &amp; conditions
                                     </label>
                                 </div>
                             </div>
