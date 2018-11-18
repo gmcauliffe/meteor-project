@@ -36,16 +36,9 @@ if (Meteor.isClient) {
         const password = $('[name=loginPassword]').val();
         Meteor.loginWithPassword(username, password, (error) => {
           if (error) {
-            if (error.reason === 'User not found') {
-              validator.showErrors({
-                email: "That email doesn't belong to a registered user.",
-              });
-            }
-            if (error.reason === 'Incorrect password') {
-              validator.showErrors({
-                password: 'You entered an incorrect password.'
-              });
-            }
+            validator.showErrors({
+              loginUsername: error.reason,
+            });
           } else {
             FlowRouter.go('/');
           }

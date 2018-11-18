@@ -31,7 +31,15 @@ if (Meteor.isClient) {
         required: true,
         equalTo: '#registerPassword',
       },
+      registerTerms: {
+        required: true,
+      },
     },
+    messages: {
+      registerTerms: {
+        required: "Please agree with terms & conditions.",
+      },
+    }
   });
 
   Template.Register.onCreated(() => {
@@ -39,7 +47,7 @@ if (Meteor.isClient) {
   });
 
   Template.Register.onRendered(() => {
-    $('#registerForm').validate({
+    const validator = $('#registerForm').validate({
       submitHandler: function submitHandler(event) {
         // Get value from form element
         const usernameVar = $('[name=registerUsername]').val();
@@ -52,12 +60,14 @@ if (Meteor.isClient) {
           password: passwordVar,
         }, (error) => {
           if (error) {
-            console.log(error.reason);
+            validator.showErrors({
+              registerUsername: error.reason,
+            });
           } else {
             FlowRouter.go('/');
           }
         });
-        }
+      },
     });
   });
 
