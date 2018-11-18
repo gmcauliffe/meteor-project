@@ -31,6 +31,7 @@ if (Meteor.isClient) {
 
   Template.Login.onRendered(() => {
     const validator = $('#loginForm').validate({
+      errorClass: 'has-error help-block text-right animated fadeInDown',
       submitHandler: function submitHandler(event) {
         const username = $('[name=loginUsername]').val();
         const password = $('[name=loginPassword]').val();

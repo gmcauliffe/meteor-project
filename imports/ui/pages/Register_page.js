@@ -6,13 +6,13 @@ import { FlowRouter } from 'meteor/kadira:flow-router';
 import './Register_page.html';
 
 if (Meteor.isClient) {
+  // Prevent default browser form submit
   Template.Register.events({
     'submit .register': function registerUser(event) {
-      // Prevent default browser form submit
       event.preventDefault();
     },
   });
-
+  // Rules and custom messages for form validation
   $.validator.setDefaults({
     rules: {
       registerUsername: {
@@ -37,7 +37,7 @@ if (Meteor.isClient) {
     },
     messages: {
       registerTerms: {
-        required: "Please agree with terms & conditions.",
+        required: 'Please agree with terms & conditions.',
       },
     }
   });
@@ -48,12 +48,14 @@ if (Meteor.isClient) {
 
   Template.Register.onRendered(() => {
     const validator = $('#registerForm').validate({
+      errorClass: 'has-error help-block text-right animated fadeInDown',
       submitHandler: function submitHandler(event) {
         // Get value from form element
         const usernameVar = $('[name=registerUsername]').val();
         const emailVar = $('[name=registerEmail]').val();
         const passwordVar = $('[name=registerPassword]').val();
 
+        // Register new User
         Accounts.createUser({
           username: usernameVar,
           email: emailVar,
