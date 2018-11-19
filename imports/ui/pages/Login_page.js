@@ -37,14 +37,14 @@ if (Meteor.isClient) {
         const username = $('[name=loginUsername]').val();
         const password = $('[name=loginPassword]').val();
         const rememberMe = $('[name=loginRememberMe]').prop('checked');
+
         RememberMe.loginWithPassword(username, password, (error) => {
           if (error) {
             validator.showErrors({
               loginUsername: error.reason,
             });
           } else {
-            console.log("RememberMe", rememberMe);
-            FlowRouter.go('/');
+            FlowRouter.go('/home');
           }
         }, rememberMe);
       },

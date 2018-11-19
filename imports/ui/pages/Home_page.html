@@ -1,7 +1,20 @@
 <template name="Home">
   {{#App_forceLoggedIn}}
-  <h1>{{ currentUser.username }}</h1>
-  <h3>{{ email }}</h3>
-  <button><a href="#" class="logout">Logout</a></button>
+  <!-- Coming Soon Content -->
+  <div class="content pulldown bg-black-op overflow-hidden animated fadeIn">
+    <div class="row text-center push">
+        <div class="col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-3">
+            <!-- Title -->
+            <h1 class="text-white push-5">Welcome!</h1>
+            <h2 class="h5 text-white-op push-5">{{ currentUser.username }}</h2>
+            <!-- END Title -->
+            <div class="text-white-op push-30">{{ email }}</div>
+            <!-- Link Home -->
+            <div class="push-10">
+                <a id="logout" class="btn btn-default" href="#" role="button"><i class="fa fa-times"></i> Logout</a>
+            </div>
+        </div>
+    </div>
+  </div>
   {{/App_forceLoggedIn}}
 </template>

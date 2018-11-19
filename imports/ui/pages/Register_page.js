@@ -66,7 +66,7 @@ if (Meteor.isClient) {
               registerUsername: error.reason,
             });
           } else {
-            FlowRouter.go('/');
+            FlowRouter.go('/home');
           }
         });
       },
