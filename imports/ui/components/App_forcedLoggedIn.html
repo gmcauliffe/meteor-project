@@ -2,6 +2,24 @@
   {{#if currentUser}}
     {{> Template.contentBlock}}
   {{else}}
-    {{> Login}}
+  <div class="content pulldown bg-black-op overflow-hidden animated fadeIn">
+    <div class="row text-center push">
+        <div class="col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-3">
+            <!-- Title -->
+            <h1 class="text-white push-10">Please login to see this page.</h1>
+            <div class="push-30">
+              <a class="btn btn-default" href="/login" role="button"><i class="fa fa-arrow"></i> Login</a>
+            </div>
+
+            <h2 class="h5 text-white-op push-5">Don't have an account?</h2>
+            <!-- END Title -->
+            <div class="text-white-op push-10">Create one here...</div>
+            <!-- Link Home -->
+            <div class="push-10">
+              <a class="btn btn-default" href="/register" role="button"><i class="fa fa-plus"></i> register</a>
+            </div>
+        </div>
+    </div>
+  </div>
   {{/if}}
 </template>
