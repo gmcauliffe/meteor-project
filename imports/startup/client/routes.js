@@ -17,6 +17,12 @@ import '../../ui/components/App_notFound.html';
 
 // Below here are the route definitions
 FlowRouter.route('/', {
+  // Check if user is logged in
+  triggersEnter: [(context, redirect) => {
+    if (Meteor.userId()) {
+      redirect('/home');
+    }
+  }],
   name: 'Landing',
   action() {
     BlazeLayout.render('body', { main: 'Landing' });
@@ -24,6 +30,12 @@ FlowRouter.route('/', {
 });
 
 FlowRouter.route('/login', {
+  // Check if user is logged in
+  triggersEnter: [(context, redirect) => {
+    if (Meteor.userId()) {
+      redirect('/home');
+    }
+  }],
   name: 'Login',
   action() {
     BlazeLayout.render('body', { main: 'Login' });
@@ -31,6 +43,12 @@ FlowRouter.route('/login', {
 });
 
 FlowRouter.route('/register', {
+  // Check if user is logged in
+  triggersEnter: [(context, redirect) => {
+    if (Meteor.userId()) {
+      redirect('/home');
+    }
+  }],
   name: 'Register',
   action() {
     BlazeLayout.render('body', { main: 'Register' });
@@ -38,6 +56,12 @@ FlowRouter.route('/register', {
 });
 
 FlowRouter.route('/home', {
+  // Check if user is logged in
+  triggersEnter: [(context, redirect) => {
+    if (!Meteor.userId()) {
+      redirect('/login');
+    }
+  }],
   name: 'Home',
   action() {
     BlazeLayout.render('layout1', { main: 'Home' });
