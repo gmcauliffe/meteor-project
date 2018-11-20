@@ -28,11 +28,11 @@ if (Meteor.isClient) {
     messages: {
       loginUsername: {
         required: 'Please enter a username',
-        minlength: 'Your username must consist of at least 3 characters'
+        minlength: 'Your username must consist of at least 3 characters',
       },
       loginPassword: {
         required: 'Please provide a password',
-        minlength: 'Your password must be at least 5 characters long'
+        minlength: 'Your password must be at least 5 characters long',
       },
     }
   });
