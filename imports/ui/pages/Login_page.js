@@ -38,10 +38,6 @@ if (Meteor.isClient) {
     }
   });
 
-  Template.Login.onCreated(() => {
-    console.log("The 'login' template was just created.");
-  });
-
   Template.Login.onRendered(() => {
     const validator = $('#loginForm').validate({
       // Add classes to validation display
@@ -75,9 +71,5 @@ if (Meteor.isClient) {
         }, rememberMe);
       },
     });
-  });
-
-  Template.Login.onDestroyed(() => {
-    console.log("The 'login' template was just destroyed.");
   });
 }

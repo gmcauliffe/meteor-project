@@ -19,9 +19,6 @@ Template.Home.helpers({
 });
 
 if (Meteor.isClient) {
-  Template.Home.onCreated(() => {
-    console.log("The 'Home' template was just created.");
-  });
   Template.Home.onRendered(() => {
     document.body.style.backgroundImage = "url('/img/photos/photo6@2x.jpg')";
   });

@@ -55,10 +55,6 @@ if (Meteor.isClient) {
     },
   });
 
-  Template.Register.onCreated(() => {
-    console.log("The 'Register' template was just created.");
-  });
-
   Template.Register.onRendered(() => {
     const validator = $('#registerForm').validate({
       // Add classes to validation display
@@ -98,9 +94,5 @@ if (Meteor.isClient) {
         });
       },
     });
-  });
-
-  Template.Register.onDestroyed(() => {
-    console.log("The 'Register' template was just destroyed.");
   });
 }
