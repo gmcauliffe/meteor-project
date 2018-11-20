@@ -1,8 +1,9 @@
-import { Meteor } from 'meteor/meteor';
-import { Template } from 'meteor/templating';
 import { FlowRouter } from 'meteor/kadira:flow-router';
-import RememberMe from 'meteor/tprzytula:remember-me';
+import { Meteor } from 'meteor/meteor';
 import { jQuery } from 'meteor/jquery';
+import RememberMe from 'meteor/tprzytula:remember-me';
+import { Template } from 'meteor/templating';
+
 
 import './Login_page.html';
 

@@ -1,8 +1,8 @@
 import { Accounts } from 'meteor/accounts-base';
-import { Meteor } from 'meteor/meteor';
-import { Template } from 'meteor/templating';
 import { FlowRouter } from 'meteor/kadira:flow-router';
 import { jQuery } from 'meteor/jquery';
+import { Meteor } from 'meteor/meteor';
+import { Template } from 'meteor/templating';
 
 import './Register_page.html';
 
