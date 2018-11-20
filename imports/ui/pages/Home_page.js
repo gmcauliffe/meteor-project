@@ -1,3 +1,4 @@
+import { FlowRouter } from 'meteor/kadira:flow-router';
 import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
 
@@ -7,6 +8,7 @@ Template.Home.events({
   'click #logout': function logout(event) {
     event.preventDefault();
     Meteor.logout();
+    FlowRouter.go('/');
   },
 });
 
@@ -17,9 +19,6 @@ Template.Home.helpers({
 });
 
 if (Meteor.isClient) {
-  Template.Home.onCreated(() => {
-    console.log("The 'Home' template was just created.");
-  });
   Template.Home.onRendered(() => {
     document.body.style.backgroundImage = "url('/img/photos/photo6@2x.jpg')";
   });

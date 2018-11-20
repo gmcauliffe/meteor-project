@@ -6,9 +6,6 @@ import '../pages/Home_page';
 import '../components/App_forcedLoggedIn.html';
 
 if (Meteor.isClient) {
-  Template.layout1.onCreated(() => {
-    console.log("The 'layout1' template was just created.");
-  });
   Template.layout1.onRendered(() => {
     document.body.style.backgroundImage = "url('/img/photos/photo6@2x.jpg')";
   });

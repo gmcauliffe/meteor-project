@@ -1,8 +1,9 @@
-import { Meteor } from 'meteor/meteor';
-import { Template } from 'meteor/templating';
 import { FlowRouter } from 'meteor/kadira:flow-router';
-import RememberMe from 'meteor/tprzytula:remember-me';
+import { Meteor } from 'meteor/meteor';
 import { jQuery } from 'meteor/jquery';
+import RememberMe from 'meteor/tprzytula:remember-me';
+import { Template } from 'meteor/templating';
+
 
 import './Login_page.html';
 
@@ -35,10 +36,6 @@ if (Meteor.isClient) {
         minlength: 'Your password must be at least 5 characters long',
       },
     }
-  });
-
-  Template.Login.onCreated(() => {
-    console.log("The 'login' template was just created.");
   });
 
   Template.Login.onRendered(() => {
@@ -74,9 +71,5 @@ if (Meteor.isClient) {
         }, rememberMe);
       },
     });
-  });
-
-  Template.Login.onDestroyed(() => {
-    console.log("The 'login' template was just destroyed.");
   });
 }
