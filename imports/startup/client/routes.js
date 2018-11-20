@@ -5,6 +5,7 @@ import { BlazeLayout } from 'meteor/kadira:blaze-layout';
 // Import templates
 import '../../ui/layouts/body';
 import '../../ui/layouts/layout1';
+import '../../ui/pages/Landing_page';
 import '../../ui/pages/Login_page';
 import '../../ui/pages/Register_page';
 import '../../ui/pages/Home_page';
@@ -16,9 +17,9 @@ import '../../ui/components/App_notFound.html';
 
 // Below here are the route definitions
 FlowRouter.route('/', {
-  name: 'Home',
+  name: 'Landing',
   action() {
-    BlazeLayout.render('body', { main: 'Login' });
+    BlazeLayout.render('body', { main: 'Landing' });
   },
 });
 
