@@ -1,25 +1,34 @@
 <template name="App_forceLoggedIn">
-  {{#if currentUser}}
-    {{> Template.contentBlock}}
+  {{#if loggingIn}}
+    <div class="content pulldown bg-black-op overflow-hidden animated fadeIn">
+        <div class="row text-center push">
+            <div class="col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-3">
+                <!-- Title -->
+                <h1 class="text-white push-20">Logging in...</h1>
+            </div>
+        </div>
+    </div>
   {{else}}
+    {{#if currentUser}}
+      {{> Template.contentBlock}}
+    {{else}}
   <div class="content pulldown bg-black-op overflow-hidden animated fadeIn">
     <div class="row text-center push">
         <div class="col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-3">
             <!-- Title -->
-            <h1 class="text-white push-10">Please login to see this page.</h1>
+            <h1 class="text-white push-20">Please login to see this page.</h1>
             <div class="push-30">
-              <a class="btn btn-default" href="/login" role="button"><i class="si si-login pull-right"></i> Login</a>
+              <a class="btn btn-default btn-lg" href="/login" role="button"><i class="si si-login pull-right"></i> Login</a>
             </div>
-
-            <h2 class="h5 text-white-op push-5">Don't have an account?</h2>
             <!-- END Title -->
-            <div class="text-white-op push-10">Create one here...</div>
+            <div class="text-white-op push-10">Don't have an account? Create one here...</div>
             <!-- Link Home -->
             <div class="push-10">
-              <a class="btn btn-default" href="/register" role="button"><i class="fa fa-user-plus pull-right"></i> Register</a>
+              <a class="btn btn-default btn-sm" href="/register" role="button"><i class="fa fa-user-plus pull-right"></i> Register</a>
             </div>
         </div>
     </div>
   </div>
+    {{/if}}
   {{/if}}
 </template>
