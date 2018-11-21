@@ -65,8 +65,10 @@ This was my first exploration into using Meteor or Blaze. I started out by going
 
 ### Next Steps
 
+* Review and refactor
 * Have the login and registration error responses from the server display in the relevant form input depending on the response (currently all render in the top input) 
 * Add in a "Forgot password function"
+* Floating labels on the login form (to match template)
 * Consider possibilities for expanding the functionality of the app beyond user login/registration.
 
 
