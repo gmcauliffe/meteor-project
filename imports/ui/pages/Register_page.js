@@ -18,7 +18,7 @@ if (Meteor.isClient) {
     rules: {
       registerUsername: {
         required: true,
-        minlength: 6,
+        minlength: 3,
       },
       registerEmail: {
         required: true,
@@ -26,7 +26,7 @@ if (Meteor.isClient) {
       },
       registerPassword: {
         required: true,
-        minlength: 6,
+        minlength: 5,
       },
       registerPassword2: {
         required: true,
