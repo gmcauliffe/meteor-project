@@ -1,7 +1,6 @@
 # Meteor Project
 
-A mini user authentication application built with Meteor and Blaze, using OneUI HTML templates for the user and registration forms. Learned how to navigate existing code-bases and implement new features with unfamiliar frameworks. Applied previous research tactics to become familiar with new paradigms, frameworks and libraries.
-
+A mini user authentication application built with Meteor and Blaze, using OneUI HTML templates for the user and registration forms. 
 
 Implemented the following features:
 
@@ -10,6 +9,7 @@ Implemented the following features:
 * **User Registration**: New users are able to signup. Email and username are checked for uniqueness to ensure non existing user, and alerts displayed if existing user.
 * **Validation**: Form inputs are validated and appropriate error messages displayed to user.
 * **Routing**: If logged in the user is redirected to their home page from all manually entered urls. If home page is accessed directly without logging in the user is redirected to the login page.
+* **Remember Me**: At login the user can choose if they want the site to remember them and keep them logged in.
 
 Code is DRY and modular, following the recommended Meteor application structure.
 
@@ -21,9 +21,12 @@ Code is DRY and modular, following the recommended Meteor application structure.
 4. Go to <http://localhost:3000/> in your browser.
 
 
-### Final Product
+## Final Product
 
-!["Screenshot of Meteor App"](https://github.com/gmcauliffe/meteor-project/blob/master/docs/)
+!["Screenshot of landing page"](https://github.com/gmcauliffe/meteor-project/blob/master/docs/landing-page.png?raw=true)
+!["Screenshot of login page"](https://github.com/gmcauliffe/meteor-project/blob/master/docs/login.png?raw=true)
+!["Screenshot of registration page"](https://github.com/gmcauliffe/meteor-project/blob/master/docs/register.png?raw=true)
+!["Screenshot of user home page"](https://github.com/gmcauliffe/meteor-project/blob/master/docs/user-home-page.png?raw=true)
 
 ## Dependencies
 
@@ -61,4 +64,12 @@ RememberMe.loginWithPassword(username, password, (error) => {
 
 
 ```
+## Process
+
+This was my first exploration into using Meteor or Blaze. I started out by going through the online ![Meteor/Blaze tutorial](https://www.meteor.com/tutorials/blaze/creating-an-app) and creating my own ToDo app with some extra features, including routing. I familiarised myself with the existing code-base (OneUI template) and determined how I could make use of the existing HTML and CSS using Meteor and Blaze. I applied previous research tactics to become familiar with new paradigms, frameworks and libraries. Overall it was a successful experience.
+
+### Next Steps
+* Have the login and registration error responses from the server display in the relevant form input depending on the response (currently all render in the top input) 
+* Add in a "Forgot password function"
+* Consider possibilities for expanding the functionality of the app beyond user login/registration.
 
