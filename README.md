@@ -12,6 +12,8 @@ Implemented the following features:
 * **Validation**: Form inputs are validated and appropriate error messages displayed to user.
 * **Routing**: If logged in the user is redirected to their home page from all manually entered urls. If home page is accessed directly without logging in the user is redirected to the login page.
 * **Remember Me**: At login the user can choose if they want the site to remember them and keep them logged in.
+* **Not Found**: If the user tries to go directly to any unused paths they will be presented with a "Not Found" page.
+
 
 ### Getting Started
 
