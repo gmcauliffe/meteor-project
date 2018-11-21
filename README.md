@@ -15,9 +15,9 @@ Code is DRY and modular, following the recommended Meteor application structure.
 
 ### Getting Started
 
-1. Clone this repository.
-2. Install dependencies using the `npm install` command.
-3. Start the web server using the `npm start` command. The app will be served at <http://localhost:3000/>.
+1. Fork and clone this repository.
+2. Install dependencies using the `meteor npm install` command.
+3. Start the web server using the `meteor` command. The app will be served at <http://localhost:3000/>.
 4. Go to <http://localhost:3000/> in your browser.
 
 
@@ -61,11 +61,4 @@ RememberMe.loginWithPassword(username, password, (error) => {
 
 
 ```
-
-## Setup
-
-1. Fork & Clone
-2. Run `install` to install dependencies
-3. Run `meteor` to start the server
-
 
