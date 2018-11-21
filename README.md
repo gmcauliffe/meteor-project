@@ -13,8 +13,6 @@ Implemented the following features:
 * **Routing**: If logged in the user is redirected to their home page from all manually entered urls. If home page is accessed directly without logging in the user is redirected to the login page.
 * **Remember Me**: At login the user can choose if they want the site to remember them and keep them logged in.
 
-Code is DRY and modular, following the recommended Meteor application structure.
-
 ### Getting Started
 
 1. Fork and clone this repository.
@@ -22,13 +20,6 @@ Code is DRY and modular, following the recommended Meteor application structure.
 3. Start the web server using the `meteor` command. The app will be served at <http://localhost:3000/>.
 4. Go to <http://localhost:3000/> in your browser.
 
-
-## Final Product
-
-!["Screenshot of landing page"](https://github.com/gmcauliffe/meteor-project/blob/master/docs/landing-page.png?raw=true)
-!["Screenshot of login page"](https://github.com/gmcauliffe/meteor-project/blob/master/docs/login.png?raw=true)
-!["Screenshot of registration page"](https://github.com/gmcauliffe/meteor-project/blob/master/docs/register.png?raw=true)
-!["Screenshot of user home page"](https://github.com/gmcauliffe/meteor-project/blob/master/docs/user-home-page.png?raw=true)
 
 ## Dependencies
 
@@ -71,7 +62,16 @@ RememberMe.loginWithPassword(username, password, (error) => {
 This was my first exploration into using Meteor or Blaze. I started out by going through the online [Meteor/Blaze tutorial](https://www.meteor.com/tutorials/blaze/creating-an-app) and creating my own [ToDo app](https://github.com/gmcauliffe/simple-todos) with some extra features, including routing. I familiarised myself with the existing code-base (OneUI template) and determined how I could make use of the existing HTML and CSS using Meteor and Blaze. I applied previous research tactics to become familiar with new paradigms, frameworks and libraries. Overall it was a successful experience.
 
 ### Next Steps
+
 * Have the login and registration error responses from the server display in the relevant form input depending on the response (currently all render in the top input) 
 * Add in a "Forgot password function"
 * Consider possibilities for expanding the functionality of the app beyond user login/registration.
+
+
+## Final Product
+
+!["Screenshot of landing page"](https://github.com/gmcauliffe/meteor-project/blob/master/docs/landing-page.png?raw=true)
+!["Screenshot of login page"](https://github.com/gmcauliffe/meteor-project/blob/master/docs/login.png?raw=true)
+!["Screenshot of registration page"](https://github.com/gmcauliffe/meteor-project/blob/master/docs/register.png?raw=true)
+!["Screenshot of user home page"](https://github.com/gmcauliffe/meteor-project/blob/master/docs/user-home-page.png?raw=true)
 
