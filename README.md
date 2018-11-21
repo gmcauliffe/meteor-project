@@ -2,6 +2,8 @@
 
 A mini user authentication application built with Meteor and Blaze, using OneUI HTML templates for the user and registration forms. 
 
+See ![live demo here!](https://glacial-mesa-74136.herokuapp.com/)
+
 Implemented the following features:
 
 * **User Authentication**: Username and password are compared against the database upon login.
