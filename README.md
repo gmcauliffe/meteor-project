@@ -2,7 +2,7 @@
 
 A mini user authentication application built with Meteor and Blaze, using OneUI HTML templates for the user and registration forms. 
 
-See ![live demo here!](https://glacial-mesa-74136.herokuapp.com/)
+See [live demo here!](https://glacial-mesa-74136.herokuapp.com/)
 
 Implemented the following features:
 
@@ -68,7 +68,7 @@ RememberMe.loginWithPassword(username, password, (error) => {
 ```
 ## Process
 
-This was my first exploration into using Meteor or Blaze. I started out by going through the online ![Meteor/Blaze tutorial](https://www.meteor.com/tutorials/blaze/creating-an-app) and creating my own ToDo app with some extra features, including routing. I familiarised myself with the existing code-base (OneUI template) and determined how I could make use of the existing HTML and CSS using Meteor and Blaze. I applied previous research tactics to become familiar with new paradigms, frameworks and libraries. Overall it was a successful experience.
+This was my first exploration into using Meteor or Blaze. I started out by going through the online [Meteor/Blaze tutorial](https://www.meteor.com/tutorials/blaze/creating-an-app) and creating my own [ToDo app](https://github.com/gmcauliffe/simple-todos) with some extra features, including routing. I familiarised myself with the existing code-base (OneUI template) and determined how I could make use of the existing HTML and CSS using Meteor and Blaze. I applied previous research tactics to become familiar with new paradigms, frameworks and libraries. Overall it was a successful experience.
 
 ### Next Steps
 * Have the login and registration error responses from the server display in the relevant form input depending on the response (currently all render in the top input) 
